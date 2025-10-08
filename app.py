@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Database connection
 def get_db_connection():
     return psycopg2.connect(
-        host="https://laptake-care-bot.onrender.com",           # or your Render/AWS host
+        host="localhost",           # or your Render/AWS host
         database="laptakecare",
         user="postgres",
         password="gaurav"
@@ -81,4 +81,5 @@ def handle_tracking(req):
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
+
 
